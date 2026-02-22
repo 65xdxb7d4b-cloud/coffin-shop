@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>ГРОБЫ | минимализм</title>
+ <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+ <!-- НАВИГАЦИЯ -->
+ <nav class="navbar">
+ <div class="container">
+ <div class="logo">ГРОБЫ.</div>
+            
+ <!-- Бургер-меню (для мобилок) -->
+ <div class="burger" id="burger">
+ <span></span>
+ <span></span>
+ <span></span>
+ </div>
+
+ <ul class="nav-links" id="navLinks">
+ <li><a href="#" class="nav-link" data-scroll="catalog">Каталог</a></li>
+ <li><a href="#" class="nav-link" data-scroll="delivery">Доставка</a></li>
+ <li><a href="#" class="nav-link" data-scroll="contacts">Контакты</a></li>
+ </ul>
+ </div>
+ </nav>
+
+ <!-- ГЕРОЙ -->
+ <section class="hero">
+ <div class="container">
+ <h1 class="hero-title fade-in">Гробы</h1>
+ <p class="hero-subtitle fade-in">Минимализм. Тишина. Вечность.</p>
+ <button class="btn btn-primary fade-in" data-scroll="catalog">Смотреть каталог</button>
+ </div>
+ </section>
+
+ <!-- ФИЛЬТРЫ (НОВЫЙ БЛОК) -->
+ <section class="filters-section">
+ <div class="container">
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Цена:</label>
+                    <select id="priceFilter" class="filter-select">
+                        <option value="all">Все цены</option>
+                        <option value="0-30000">до 30 000 ₽</option>
+                        <option value="30000-50000">30 000 - 50 000 ₽</option>
+                        <option value="50000-100000">от 50 000 ₽</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label>Размер:</label>
+                    <select id="sizeFilter" class="filter-select">
+                        <option value="all">Все размеры</option>
+                        <option value="standard">Стандарт (180 см)</option>
+                        <option value="large">Увеличенный (200 см)</option>
+                        <option value="double">Double (220 см)</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Материал:</label>
+                    <select id="materialFilter" class="filter-select">
+                        <option value="all">Все материалы</option>
+                        <option value="oak">Дуб</option>
+                        <option value="pine">Сосна</option>
+                        <option value="metal">Металл</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-outline" id="resetFilters">Сбросить</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- КАТАЛОГ -->
+    <section class="catalog" id="catalog">
+        <div class="container">
+            <h2 class="section-title fade-in">Каталог</h2>
+            <div class="products-grid" id="productsGrid">
+                
+                <!-- Карточки будут загружаться через JS -->
+                <!-- Но для примера оставим несколько -->
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- ДОСТАВКА -->
+    <section class="delivery" id="delivery">
+        <div class="container">
+            <h2 class="section-title fade-in">Доставка</h2>
+            <div class="delivery-content fade-in">
+                <p>Доставляем по всей России. 24/7.</p>
+                <p>Тишина и уважение — наши стандарты.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- КОНТАКТЫ -->
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <h2 class="section-title fade-in">Контакты</h2>
+            <div class="contacts-content fade-in">
+                <p>+7 (999) 123-45-67</p>
+                <p>info@groby.ru</p>
+                <p>Москва, ул. Тихая, 1</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ФУТЕР -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 ГРОБЫ. — просто гробы</p>
+        </div>
+    </footer>
+
+    <!-- МОДАЛЬНОЕ ОКНО (НОВОЕ) -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body">
+                <h3 id="modalTitle">Гроб классический</h3>
+                <div class="modal-details">
+                    <p><strong>Цена:</strong> <span id="modalPrice">25 000 ₽</span></p>
+                    <p><strong>Материал:</strong> <span id="modalMaterial">Дуб</span></p>
+                    <p><strong>Размер:</strong> <span id="modalSize">180 см</span></p>
+                    <p><strong>Описание:</strong> <span id="modalDesc">Минималистичный гроб из массива дуба. Внутренняя обивка — натуральный шелк.</span></p>
+                </div>
+                <button class="btn btn-primary modal-order">Заказать</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
